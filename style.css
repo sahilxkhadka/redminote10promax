@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 62.5%;
+}
+
+/* ###############utility-classes####################  */
+.heading{
+    font-size: 2.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase
+}
+.container{
+    
+    display: block;
+    max-width: 85%;
+    margin: auto;
+}
+/* ###########Nabnar styling#################### */
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    width: 100%;
+    background: rgb(80, 78, 78);
+    opacity: 0.86;
+    z-index: 5;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+.logo img{
+    display: block;
+    height: 64px;
+    width: 194px;
+}
+.logo-image{
+    padding-top: 1rem;
+    object-fit: cover;
+}
+.menu-items{
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin: auto 1.5rem;
+}
+.menu-items a{
+    text-decoration: none;
+    color: honeydew;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.menu-items a:hover{
+    text-decoration: 2px underline rgb(255, 225, 225);
+}
+/* #########################Home page styling####################  */
+.cover-image-container{
+    max-width: 100%;
+    position: relative;
+}
+.cover-image-container img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: center;
+    object-position: center;
+}
+.button{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    background: #d13838;
+    color:honeydew;
+    font-size: 2rem;
+    font-weight: 400;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+}
+.cover-image-container .cover-price{
+    font-size: 2rem;
+    color:honeydew;
+    font-weight: 600;
+}
+.cover-text{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    color: honeydew;
+    z-index: 2;
+    opacity: 0;
+    
+    transition: all 0.2s ease-in-out;
+}
+.cover-heading{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.cover-image-container:hover .cover-text{
+    opacity: 1;
+}
+.cover-image-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.cover-image-container:hover::after{
+    opacity: 0.7;
+}
+
+/* #########################Home-text############################ */
+.home-text{
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+/* ########################DEsign and build#############  */
+.design-heading{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    text-transform: uppercase;
+}
+.image-container{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.image-container img{
+    display: block;
+    object-fit: center;
+    object-position: center;
+    height: 350px;
+}
+.design-text{
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+}
+
+/* #####################Display desgin##############3  */
+.display-heading{
+    margin-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.display-text{
+    padding-top: 1rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+/* ###################Camera styling##############  */
+.camera-heading{
+    margin-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.camera-image-container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.camera-image-container img{
+    display: block;
+    width: 46%;
+    height: 350px;
+    object-fit: center;
+    object-position: center;
+}
+.camera-text{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ############# performance-styling############# */
+.performance-heading{
+    margin-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.performance-image-container{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.performance-image-container img{
+    display: block;
+    height: 350px;
+    object-fit: center;
+    object-position: center;
+}
+.performance-text{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ################## battery-styling ########### */
+.battery-heading{
+    margin-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.battery-image-container{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.battery-image-container img{
+    display: block;
+    height: 350px;
+    object-fit: cover;
+    object-position: left;
+}
+.battery-text{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ###################MIUI styling ##############  */
+#MIUI{
+    margin-bottom: 2rem;
+}
+.miui-heading{
+    margin-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.miui-image-container{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.miui-image-container img{
+    display: block;
+    height: 350px;
+    object-fit: center;
+    object-position: center;
+}
+.miui-text{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+/* ################## final-thoughts ##################3 */
+.final-thoughts{
+    margin-top: 2rem;
+    background: rgb(233, 225, 225);
+    color: #555;
+    max-width: 1080px;
+    margin: auto;
+    text-align: center;
+}
+.final-heading{
+    padding-top: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.final-image-container{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.final-image-container img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.star-container{
+    margin-top: 2rem;
+}
+.star-container .checked{
+    color: #ff9529;;
+}
+.final-text{
+    padding: 2rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* ############# social links ##############  */
+#footer-content{
+    width: 100%;
+    height: 128px;
+    background: rgb(80, 78, 78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container .social{
+    color: honeydew;
+    margin: auto 1rem;
+}
+.esewa-image-container{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.esewa-number{
+    padding-left: 0.5rem;
+    color: honeydew;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.esewa-image-container img{
+    display: block;
+    width: 40px;
+    height: auto;
+    object-fit: center;
+    object-position: center;
+}
+.footer-text{
+    color: honeydew;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.fa-twitter-square:hover{
+    color: #1DA1F2;
+}
+.fa-facebook-square:hover{
+    color: rgb(66,103,178);
+}
+.fa-instagram-square:hover{
+    background: linear-gradient(45DEG, #405DE6, #5851DB, #83AAB4, #C13584, #E1306C, #FD1D1D);
+}
+.fa-tiktok:hover{
+    color:  #EE1D52;
+}
+/* ################################## Responsive ##################33  */
+@media(max-width: 768px){
+    .menu-items{
+        display: none;
+    }
+    .cover-image-container img{
+        object-fit: center;
+        object-position: center;
+        height: 50%;
+    }
+    .cover-image-container::after{
+        display: none;
+    }
+    .cover-text{
+        display: none;
+    }
+    .container{
+        max-width: 100%;
+        margin: 0;
+    }
+    .camera-image-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .camera-image-container img{
+        width: 100%;
+    }
+    .performance-image-container img{
+        width: 100%;
+        height: 200px;
+        object-fit: center;
+    }
+    .battery-image-container img{
+        width: 90%;
+        height: 90%
+    }
+    .miui-image-container img{
+        width: 90%;
+        height: 90%;
+    }
+    .image-container img{
+        width: 90%;
+        height: 90%;
+    }
+    .final-text{
+        padding: 2rem 0;
+    }
+}    
